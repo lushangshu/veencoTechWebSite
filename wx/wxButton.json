@@ -1,0 +1,38 @@
+{
+  "button": [
+    {
+        "type": "view",
+        "name": "百度",
+        "url": "http://www.baidu.com"
+    },
+    {
+        "type": "view",
+        "name": "新浪微博",
+        "url": "http://weibo.com"
+    },
+    {
+        "name": "multiple",
+        "sub_button": [
+            {
+                "type": "view",
+                "name": "微信jssdk测试",
+                "url": "http://wxpublic.ngrok.cc/wxTest"
+            },
+            {
+                "type": "view",
+                "name": "零零科技——2",
+                "url": "http://wxpublic.ngrok.cc"
+            },
+            {
+                "type": "view",
+                "name": "麻将机H5 Demo",
+                "url": "http://wxpublic.ngrok.cc"
+            },
+            {
+              "type":"click",
+              "name":"联系我们",
+              "key":"V1001_GOOD"
+            }]
+    }
+]
+}

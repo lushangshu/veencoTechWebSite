@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  <% include templates/head.ejs %>
+
+  <body>
+    <!--========== HEADER ==========-->
+    <% include templates/header.ejs %>
+
+    <%if(!isLogin){%>
+    <div class="section-seperator">
+        <div class="content-md container">
+            <div class="row margin-b-40">
+                <div class="col-sm-6">
+                    <p>Please Login</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-sm-7">
+                    <form>
+                        <div class="margin-b-10">
+                            <input type="text" class="form-control" placeholder="Username" name="username" id="username">
+                        </div>
+                        <div class="margin-b-10">
+                            <input type="password" class="form-control" placeholder="password" name="password" id="password">
+                        </div>
+
+                        <button type="button" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" id="logIn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%}else{%>
+      <div class = "section-seperator">
+        <div class="content-md container">
+            <div class="row margin-b-40">
+                <div class="col-sm-6">
+                    <h2>hello User <%=name %></h2><br />
+                    <button type="button" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" id="logOff">Log Off</button>
+                  </div>
+              </div>
+              <div class="row margin-b-40">
+                  <div class="col-sm-6">
+                      <h2>请求Access Token</h2><br />
+                      <button type="button" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" id="requestToken">Request Token</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+
+    <%}%>
+
+    <% include templates/footer.ejs %>
+    <% include templates/scripts.ejs %>
+  </body>
+
+
+</html>
+
+<script src="/javascripts/logic/login.js">
+  // $('#logOff').click(function(e){
+  //   console.log("button clicked");
+  //   $.get('/login/logoff', function(data) {
+  //     window.location.href='/login';
+  //   });
+  // });
+</script>
