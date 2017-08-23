@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var tiTle = 'login';
+  var tiTle = '登录';
   if(req.session.user!=null){
     console.log('session is '+ req.session);
     tiTle = req.session.user;

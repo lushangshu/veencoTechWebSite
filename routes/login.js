@@ -10,7 +10,7 @@ var pool = mysql.createPool(dbConfig.mysql);
 var router = express.Router();
 /* GET home page. */
 
-var tiTle = 'login';
+var tiTle = '用户登录';
 var name = '';
 
 var responseJSON = function (res, ret) {
@@ -52,7 +52,8 @@ router.post('/login_submit',function(req,res,next){
               "status":3
             };
           }
-          res.send(obj);
+          res.end();
+          //res.send(obj);
       }
       connection.release();
       });
@@ -60,7 +61,7 @@ router.post('/login_submit',function(req,res,next){
 });
 
 router.get('/logoff',function(req,res,next){
-  tiTle = 'login';
+  tiTle = '用户登录';
   req.session.userName = null;
   req.session.isLogin = false;
   res.json({success:1});

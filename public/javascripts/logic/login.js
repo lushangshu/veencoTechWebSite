@@ -51,7 +51,7 @@ $(function(){
         timeout:5000,
         success:function(data){
           console.log('succeed' + data);
-          window.location.href = '/';
+          window.location.href = '/manageIndex.html';
         },
         error:function(err){
           console.log('fail with error' + err.status);
